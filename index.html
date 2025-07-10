@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>GPT Stats</title>
+    <meta name="description" content="GPT Stats is a lightweight Chrome extension that tracks your ChatGPT usage: time spent, prompt count, and helpful stats in a clean popup.">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="./style.css">
+
+    <link rel="preload" as="image" href="./assets/images/screenshot-gpt_stats-light.webp">
+    <link rel="preload" as="image" href="./assets/images/screenshot-gpt_stats-dark.webp">
+
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+
+    <!-- Script -->
+    <script src="./script.js" defer></script>
+</head>
+
+<body>
+    <!-- HEADER -->
+    <header>
+        <!-- Logo -->
+        <a id="logo-link" href="https://fchavonet.github.io/web-gpt_stats_landing_page/">
+            <div id="logo-container">
+                <img src="./assets/images/logo-gpt_stats.webp" alt="GPT Stats logo">
+                <h1>GPT Stats</h1>
+            </div>
+
+            <p class="mute">Your ChatGPT Usage</p>
+        </a>
+
+        <!-- Toggle mode button -->
+        <button id="toggle-mode-btn">
+            <i class="bi bi-moon-stars-fill"></i>
+        </button>
+    </header>
+
+    <!-- MAIN -->
+    <main>
+        <!-- Left side container -->
+        <div id="left-side-container">
+            <!-- Description -->
+            <div id="description-container">
+                <p id="description-text">
+                    GPT Stats is a lightweight Chrome extension that tracks ChatGPT usage effortlessly.
+                </p>
+
+                <p id="description-subtext">
+                    It automatically measures the time you spend using AI, counts your prompts, and displays useful usage statistics, all in a clean and minimal popup interface.
+                </p>
+            </div>
+
+            <!-- Google Web Store link -->
+            <a href="#">
+                <img id="chrome-web-store" src="./assets/images/chrome_web_store.webp" alt="Chrome Web Store">
+            </a>
+        </div>
+
+        <!-- Right side container -->
+        <div id="right-side-container">
+            <img id="screenshot" src="./assets/images/screenshot-gpt_stats-light.webp" alt="GPT Stats screenshot">
+        </div>
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+        <p>GPT Stats © 2025</p>
+        <p class="mute">This is an independent project and is not officially affiliated with OpenAI.</p>
+    </footer>
+</body>
+
+</html>

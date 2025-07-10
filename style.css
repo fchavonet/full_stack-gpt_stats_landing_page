@@ -1,0 +1,230 @@
+/* RESET CSS */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* VARIABLES */
+:root {
+    /* LIGHT MODE */
+    --light-text-color: rgb(23, 23, 23);
+    --light-mute-text-color: rgb(115, 115, 115);
+    --light-border-color: rgb(229, 229, 229);
+    --light-background-color: rgb(255, 255, 255);
+    --light-secondary-background-color: rgb(243, 243, 243);
+
+    /* DARK MODE */
+    --dark-text-color: rgb(250, 250, 250);
+    --dark-mute-text-color: rgb(145, 145, 145);
+    --dark-border-color: rgb(70, 70, 70);
+    --dark-background-color: rgb(10, 10, 10);
+    --dark-secondary-background-color: rgb(23, 23, 23);
+
+    /* BOTH MODES */
+    --primary-color: rgb(15, 158, 123);
+}
+
+/* GENERAL */
+body {
+    width: 100%;
+    height: 100vh;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 15px;
+    color: var(--light-text-color);
+    background-color: var(--light-background-color);
+}
+
+body.dark {
+    color: var(--dark-text-color);
+    background-color: var(--dark-background-color);
+}
+
+a {
+    text-decoration: none;
+    color: var(--light-text-color);
+}
+
+a.dark {
+    color: var(--dark-text-color);
+}
+
+.mute {
+    font-size: 10px;
+    color: var(--light-mute-text-color);
+}
+
+.mute.dark {
+    color: var(--dark-mute-text-color);
+}
+
+/* HEADER */
+header {
+    width: 100%;
+    height: auto;
+    padding: 15px 15px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+#logo-link {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#logo-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+}
+
+#logo-container img {
+    height: 25px;
+}
+
+#logo-container h1 {
+    font-size: 35px;
+}
+
+#logo-link p {
+    font-size: 12px;
+    letter-spacing: 3px;
+}
+
+#toggle-mode-btn {
+    width: 25px;
+    height: 25px;
+    display: none;
+    color: var(--light-text-color);
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+#toggle-mode-btn.dark {
+    color: var(--dark-text-color);
+}
+
+/* MAIN */
+main {
+    width: 100%;
+    height: 100%;
+    padding: 0 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+}
+
+#left-side-container {
+    padding-top: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 25px;
+}
+
+#description-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 10px;
+    font-size: 20px;
+}
+
+#description-text {
+    font-weight: 800;
+}
+
+#description-subtext {
+    font-weight: 200;
+    color: var(--light-mute-text-color);
+}
+
+#chrome-web-store {
+    width: 50%;
+}
+
+#screenshot {
+    width: 100%;
+    padding-top: 0;
+    filter: drop-shadow(0 0 5px rgba(0, 0, 0, 0.1));
+    -webkit-filter: drop-shadow(0 0 5px rgba(0, 0, 0, 0.1));
+}
+
+/* FOOTER */
+footer {
+    width: 100%;
+    height: auto;
+    padding: 0 15px 15px 15px;
+    position: fixed;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    text-align: center;
+}
+
+/* RESPONSIVE */
+@media (orientation: landscape) {
+    main {
+        flex-direction: row;
+    }
+}
+
+@media (min-width: 1200px) {
+    main {
+        flex-direction: row;
+    }
+}
+
+@media (min-width: 992px) {
+    main {
+        gap: 100px;
+    }
+
+    #left-side-container {
+        padding-top: 0;
+    }
+}
+
+@media (min-width: 768px) {
+    header {
+        max-width: 1320px;
+        margin: 0 auto;
+        padding: 15px 30px;
+        justify-content: space-between;
+    }
+
+    #toggle-mode-btn {
+        display: block;
+    }
+
+    main {
+        max-width: 1320px;
+        margin: 0 auto;
+        padding: 0 30px;
+    }
+
+    #screenshot {
+        padding-top: 30px;
+    }
+}

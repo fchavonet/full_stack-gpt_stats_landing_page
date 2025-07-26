@@ -68,7 +68,7 @@ a.dark {
 header {
     width: 100%;
     height: auto;
-    padding: 15px 15px;
+    padding: 15px 15px 0 15px;
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -159,11 +159,15 @@ main {
 
 #chrome-web-store {
     width: 50%;
+    transition: transform 0.2s ease-in-out;
+}
+
+#chrome-web-store:hover {
+    transform: translateX(5px);
 }
 
 #screenshot {
     width: 100%;
-    padding-top: 0;
     filter: drop-shadow(0 0 5px rgba(0, 0, 0, 0.1));
     -webkit-filter: drop-shadow(0 0 5px rgba(0, 0, 0, 0.1));
 }
@@ -182,12 +186,6 @@ footer {
 }
 
 /* RESPONSIVE */
-@media (orientation: landscape) {
-    main {
-        flex-direction: row;
-    }
-}
-
 @media (min-width: 1200px) {
     main {
         flex-direction: row;
@@ -198,17 +196,13 @@ footer {
     main {
         gap: 100px;
     }
-
-    #left-side-container {
-        padding-top: 0;
-    }
 }
 
 @media (min-width: 768px) {
     header {
         max-width: 1320px;
         margin: 0 auto;
-        padding: 15px 30px;
+        padding: 30px 30px 0 30px;
         justify-content: space-between;
     }
 
@@ -220,5 +214,31 @@ footer {
         max-width: 1320px;
         margin: 0 auto;
         padding: 0 30px;
+    }
+
+    #left-side-container {
+        margin-bottom: 80px;
+    }
+
+    footer {
+        padding: 0 30px 15px 30px;
+    }
+}
+
+@media (min-width: 1400px) {
+    main {
+        flex-direction: row;
+    }
+}
+
+@media (max-width: 1399px) and (orientation: landscape) {
+    main {
+        flex-direction: row;
+    }
+}
+
+@media (max-width: 896px) and (orientation: landscape) and (max-height: 500px) {
+    #left-side-container {
+        margin-bottom: 0px;
     }
 }
